@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { Button } from 'ui/components/Button';
 import { IPost } from "./Post.interfaces";
 import styles from './Post.module.scss';
 
@@ -8,6 +9,7 @@ export const Post = ({
   className,
   title,
   date,
+  onAddComment,
 }: IPost) => {
   function createMarkup() {
     return {__html: children};
@@ -25,6 +27,15 @@ export const Post = ({
         <span className={styles.content}>
           <div dangerouslySetInnerHTML={createMarkup()} />
         </span>
+        {!!onAddComment &&
+          <div>
+            <Button
+              caption="Add Comment"
+              onClick={onAddComment}
+              className={styles.btn}
+            />
+          </div>
+        }
       </div>
     </div>
   );

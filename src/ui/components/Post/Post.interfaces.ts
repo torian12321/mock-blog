@@ -4,6 +4,7 @@ export interface IPost {
   title?: string,
   user?: string,
   date?: string,
+  onAddComment?: Function,
 };
 
 type comment = {
