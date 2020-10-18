@@ -1,0 +1,19 @@
+@import "assets/styles/abstract/index.scss";
+
+$colorMain: $pink;
+
+.btn {
+  border: 1px solid;
+  padding: .6em 1em;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  color: $colorMain;
+  border-color: $colorMain;
+  background: transparentize($colorMain, .8);
+
+  &:hover {
+   background: $colorMain;
+   color: $white;
+  }
+}
