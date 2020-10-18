@@ -15,15 +15,22 @@ export const ViewArticle = () => {
     actions.fetchCommnentByPostId(postId);
   }, []);
 
+  const handleAddComment = () => {
+    actions.addComment({
+      "postId": postId,
+      "parent_id": null,
+      "user": "Jakeee",
+      "content": "Cras lectus nisl, scelerisque quis elit ut, luctus scelerisque purus."
+    });
+  }
+
   return (
     <div className="container">
-      <button onClick={() => actions.fetchCommnentByPostId(postId)}>
-        click me
-      </button>
       {/* {`${euro.shortName} has now a value of ${euro.rate}$`} */}
       <Post
         title={post.title}
         date={post.publish_date}
+        onAddComment={handleAddComment}
       >
         {post.content}
       </Post>

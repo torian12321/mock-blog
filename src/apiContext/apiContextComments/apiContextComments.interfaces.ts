@@ -1,7 +1,8 @@
 export interface IComment {
   id: string,
-  name: string,
-  shortName: string;
-  symbol: string,
-  rate?: string | number,
+  postId: string,
+  parent_id?: string,
+  user: string,
+  date: string;
+  content: string,
 }

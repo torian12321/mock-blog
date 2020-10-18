@@ -3,10 +3,13 @@ import { Comment } from './Comment';
 // import { ICommentsGroup } from "./Comment.interfaces";
 import styles from './Comment.module.scss';
 
-const sortComments = (comments:any, parentId: any) => {
+const sortComments = (comments:any, parentId: string | null) => {
   const node: any = [];
 
   comments
+    // .sort()
+    .sort((a: any, b: any) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0))
+    .reverse()
     .filter((c:any) => c.parent_id === parentId)
     .forEach((c: any) => {
       c.comments = sortComments(comments, c.id);

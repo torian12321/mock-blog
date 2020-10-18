@@ -2,11 +2,11 @@
 
 ```js
 import React from 'react';
-import { CurrenciesProvider, useCurrenciesState } from 'apiContext';
+import { CommentsProvider, useCommentsState } from 'apiContext';
 import { Button } from 'components/ui';
 
 const MyComponent = () => {
-  const { getCurrencyById, updateRates } = useCurrenciesState();
+  const { getCurrencyById, updateRates } = useCommentsState();
   const euro = getCurrencyById('EUR');
 
   return (
@@ -23,14 +23,8 @@ const MyComponent = () => {
 }
 
 const MoneyExchange = () => (
-  <CurrenciesProvider>
+  <CommentsProvider>
     <MyComponent />
-  </CurrenciesProvider>
+  </CommentsProvider>
 );
 ```
-
-## TODO
-  - Add typing.
-  - API key should be externally provided.
-  - Probably all currencies info should come from a single endpoint.
-  - Implement `useReducer` for more scalable solution???.
