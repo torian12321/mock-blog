@@ -32,7 +32,7 @@ export const C = ({
       </Comment>
       <div className={styles.comment_response}>
         {comments.map((c: any ={}) => (
-          <C comment={c} level={level + 1} />
+          <C comment={c} level={level + 1} key={c.id} />
         ))}
       </div>
     </div>

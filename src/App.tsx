@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { CommentsProvider } from 'apiContext';
 import Layout from 'ui/layout';
 import { ViewHome } from 'views/home';
 import { ViewArticle } from 'views/article';
@@ -11,21 +12,23 @@ import 'assets/styles/index.scss';
 
 const App = () => (
   <Router>
-    <Layout>
+    <CommentsProvider>
+      <Layout>
 
-      <Switch>
-        <Route exact path="/">
-          <ViewHome />
-        </Route>
-        <Route path="/article/:postId">
-          <ViewArticle />
-        </Route>
-        <Route path="*">
-          <ViewHome />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route exact path="/">
+            <ViewHome />
+          </Route>
+          <Route path="/article/:postId">
+            <ViewArticle />
+          </Route>
+          <Route path="*">
+            <ViewHome />
+          </Route>
+        </Switch>
 
-    </Layout>
+      </Layout>
+    </CommentsProvider>
   </Router>
 );
 
