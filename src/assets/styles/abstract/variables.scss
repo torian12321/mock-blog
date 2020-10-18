@@ -1,0 +1,36 @@
+$black: #222;
+$white: #fefefe;
+$white-dark: #bbb;
+$red: red;
+$yellow: #ffe354;
+$blue: #007990;
+$turquoise : #27d1c9;
+$text-white: $white;
+$text-black: $black;
+
+/* -------------- */
+/* --- Colors --- */
+/* -------------- */
+$color-main: $yellow;
+$color-main-text: $text-black;
+$color-main-dark: darken($color-main, 20%);
+$color-main-darker: darken($color-main, 40%);
+
+$color-sec: $blue;
+$color-sec-text: $text-black;
+$color-sec-dark: darken($color-sec, 20%);
+$color-sec-darker: darken($color-sec, 40%);
+
+/* -------------- */
+/* --- Others --- */
+/* -------------- */
+$border-radius: 3px;
+$border-style: solid;
+$border-width: 1px;
+$border-color: $color-main;
+$border: $border-style $border-width $border-color;
+
+$transition-duration: 0.5s;
+$transition-timing: ease;
+$transition-property: all;
+$transition: $transition-duration $transition-timing $transition-property;

@@ -1,0 +1,23 @@
+@import "assets/styles/abstract/index.scss";
+
+$bg: #007990;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: $bg;
+  border-bottom: solid 2px darken(#007990, 10%);
+  margin: 0 0 24px;
+  padding: 16px 0;
+
+  a {
+    color: $text-white;
+  }
+}
+

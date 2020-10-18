@@ -1,0 +1,30 @@
+@import "assets/styles/abstract/index.scss";
+
+.comment {
+  margin: 0 0 16px;
+  color: $text-black;
+  background: #e8eff9;
+  border: 1px solid $color-sec;
+  padding: .6em 1em;
+  border-radius: $border-radius;
+  outline: none;
+}
+.comment_response {
+  border-left: 1px solid $color-sec;
+  margin-left: 12px;
+  padding-left: 12px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: $color-sec;
+  margin: 0 0 10px;
+
+  &_date{
+    font-size: .6em;
+  }
+}
