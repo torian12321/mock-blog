@@ -8,6 +8,7 @@ export const Button = ({
   caption,
   className,
   onClick,
+  type = 'submit',
   disabled = false,
 }: IButton) => {
   const content = children || caption;
@@ -19,8 +20,14 @@ export const Button = ({
 
   return content ? (
     <button
+      type={type}
       onClick={handleOnClick}
-      className={classnames(styles.btn, className)}
+      className={classnames(
+        styles.btn,
+        disabled && styles.btn_disabled,
+        className,
+      )}
+      disabled={disabled}
     >
       {content}
     </button>

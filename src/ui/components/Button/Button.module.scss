@@ -16,4 +16,15 @@ $colorMain: $pink;
    background: $colorMain;
    color: $white;
   }
+
+  &_disabled {
+    &,
+    &:hover{
+      opacity: 0.6;
+      color: $colorMain;
+      border-color: $colorMain;
+      background: transparentize($colorMain, .8);
+      cursor: no-drop;
+    }
+  }
 }
