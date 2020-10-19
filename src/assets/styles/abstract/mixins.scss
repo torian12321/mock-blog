@@ -1,7 +1,0 @@
-@mixin transition(
-  $property: $transition-duration,
-  $duration: $transition-duration,
-  $timing: $transition-timing
-) {
-  transition: $property $duration $timing;
-}
