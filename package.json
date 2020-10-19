@@ -14,9 +14,11 @@
     "@types/react-router-dom": "^5.1.6",
     "axios": "^0.20.0",
     "classnames": "^2.2.6",
+    "final-form": "^4.20.1",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-final-form": "^6.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "typescript": "^3.7.5"
