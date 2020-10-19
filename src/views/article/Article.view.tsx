@@ -13,7 +13,7 @@ export const ViewArticle = () => {
 
   useEffect(() => {
     actions.fetchCommnentByPostId(postId);
-  }, []);
+  }, [actions, postId]);
 
   const handleAddComment = () => {
     actions.addComment({

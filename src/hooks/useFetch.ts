@@ -7,6 +7,7 @@ const useFetch = (url: string) => {
 
   useEffect(() => {
     fetchUrl();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchUrl = async () => {
