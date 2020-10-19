@@ -13,7 +13,8 @@ export const ViewArticle = () => {
 
   useEffect(() => {
     actions.fetchCommnentByPostId(postId);
-  }, [actions, postId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleAddComment = () => {
     actions.addComment({
