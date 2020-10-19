@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mock-blog/static/css/main.a2075253.chunk.css",
+    "main.css": "/mock-blog/static/css/main.4e9d1a16.chunk.css",
     "main.js": "/mock-blog/static/js/main.fa2415b0.chunk.js",
     "main.js.map": "/mock-blog/static/js/main.fa2415b0.chunk.js.map",
     "runtime-main.js": "/mock-blog/static/js/runtime-main.64a4ad19.js",
@@ -8,15 +8,15 @@
     "static/js/2.595a850d.chunk.js": "/mock-blog/static/js/2.595a850d.chunk.js",
     "static/js/2.595a850d.chunk.js.map": "/mock-blog/static/js/2.595a850d.chunk.js.map",
     "index.html": "/mock-blog/index.html",
-    "precache-manifest.5989894d38803078a27dbf8cb69f1f71.js": "/mock-blog/precache-manifest.5989894d38803078a27dbf8cb69f1f71.js",
+    "precache-manifest.23d511d3fdecdfcd6a0d8312ddaac4d5.js": "/mock-blog/precache-manifest.23d511d3fdecdfcd6a0d8312ddaac4d5.js",
     "service-worker.js": "/mock-blog/service-worker.js",
-    "static/css/main.a2075253.chunk.css.map": "/mock-blog/static/css/main.a2075253.chunk.css.map",
+    "static/css/main.4e9d1a16.chunk.css.map": "/mock-blog/static/css/main.4e9d1a16.chunk.css.map",
     "static/js/2.595a850d.chunk.js.LICENSE.txt": "/mock-blog/static/js/2.595a850d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64a4ad19.js",
     "static/js/2.595a850d.chunk.js",
-    "static/css/main.a2075253.chunk.css",
+    "static/css/main.4e9d1a16.chunk.css",
     "static/js/main.fa2415b0.chunk.js"
   ]
 }
