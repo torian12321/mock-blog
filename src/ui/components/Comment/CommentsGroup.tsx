@@ -7,7 +7,6 @@ const sortComments = (comments:any, parentId: string | null) => {
   const node: any = [];
 
   comments
-    // .sort()
     .sort((a: any, b: any) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0))
     .reverse()
     .filter((c:any) => c.parent_id === parentId)
@@ -18,11 +17,19 @@ const sortComments = (comments:any, parentId: string | null) => {
   return node;
 }
 
-export const C = ({
+const C = ({
   comment = {},
   level = 1,
+  onAddComment,
 }: any) => {
   const { id, user, date, content, comments = []} = comment;
+
+  const handleAdd = (args: Object) => {
+    onAddComment({
+      "parent_id": id,
+      ...args,
+    })
+  }
 
   return (
     <div>
@@ -30,6 +37,7 @@ export const C = ({
         key={id}
         user={user}
         date={date}
+        onAddComment={handleAdd}
       >
         {content}
       </Comment>
@@ -45,13 +53,14 @@ export const C = ({
 export const CommentsGroup = ({
   comments = [],
   loading = false,
+  onAddComment,
 }: any) => {
 // }: ICommentsGroup) => {
   const com = sortComments(comments, null);
   
   return !loading ? (
     com.map((comment: any ={}) =>
-      <C comment={comment} key={comment.id} />
+      <C comment={comment} key={comment.id} onAddComment={onAddComment} />
   )) : <span>Loading...</span>
 };
 

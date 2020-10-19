@@ -6,20 +6,12 @@ import { Button } from 'ui/components/Button';
 import { IAddComment } from "./AddComment.interfaces";
 import styles from './AddComment.module.scss';
 
-
-const sleep = (ms: any) => new Promise(resolve => setTimeout(resolve, ms))
-
-const onSubmit = async (values: any) => {
-  await sleep(300);
-  console.log(values)
-}
-
 const formValidate = (values: any) => {
   const errors: any = {}
-  if (!values.userName) {
+  if (!values.user) {
     errors.user = 'Required'
   }
-  if (!values.notes) {
+  if (!values.content) {
     errors.content = 'Required'
   }
 
@@ -42,7 +34,12 @@ export const AddComment = ({
     setShowForm(!showForm)
   };
 
-  return !onAddComment ? (
+  const handleSubmit = (values: Object) => {
+    onAddComment && onAddComment(values)
+    setShowForm(false)
+  }
+
+  return onAddComment ? (
     <div className={classnames(styles.post, className)}>
       <Button
         caption={!showForm ? "Add Comment" : 'Close Form'}
@@ -51,10 +48,10 @@ export const AddComment = ({
       />
       {showForm &&
         <Form
-          onSubmit={onSubmit}
+          onSubmit={handleSubmit}
           initialValues={{}}
           validate={formValidate}
-          render={({ handleSubmit, form, submitting, pristine, values }) => {
+          render={({ handleSubmit, values }) => {
             const valid = formIsValid(values);
 
             return (
@@ -74,13 +71,11 @@ export const AddComment = ({
                   caption='Submit'
                   disabled={valid}
                 />
-                </form>
+              </form>
             )
           }}
         />
       }
-
-
     </div>
   ) : null;
 };
