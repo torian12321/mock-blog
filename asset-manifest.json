@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/mock-blog/static/css/main.4e9d1a16.chunk.css",
-    "main.js": "/mock-blog/static/js/main.809daede.chunk.js",
-    "main.js.map": "/mock-blog/static/js/main.809daede.chunk.js.map",
+    "main.js": "/mock-blog/static/js/main.7fe70b90.chunk.js",
+    "main.js.map": "/mock-blog/static/js/main.7fe70b90.chunk.js.map",
     "runtime-main.js": "/mock-blog/static/js/runtime-main.64a4ad19.js",
     "runtime-main.js.map": "/mock-blog/static/js/runtime-main.64a4ad19.js.map",
-    "static/js/2.595a850d.chunk.js": "/mock-blog/static/js/2.595a850d.chunk.js",
-    "static/js/2.595a850d.chunk.js.map": "/mock-blog/static/js/2.595a850d.chunk.js.map",
+    "static/js/2.be075e08.chunk.js": "/mock-blog/static/js/2.be075e08.chunk.js",
+    "static/js/2.be075e08.chunk.js.map": "/mock-blog/static/js/2.be075e08.chunk.js.map",
     "index.html": "/mock-blog/index.html",
-    "precache-manifest.9d59175ddb1594587991e7f2a64d0cfd.js": "/mock-blog/precache-manifest.9d59175ddb1594587991e7f2a64d0cfd.js",
+    "precache-manifest.9b8bc66e587a5790a39a561a43c88d9f.js": "/mock-blog/precache-manifest.9b8bc66e587a5790a39a561a43c88d9f.js",
     "service-worker.js": "/mock-blog/service-worker.js",
     "static/css/main.4e9d1a16.chunk.css.map": "/mock-blog/static/css/main.4e9d1a16.chunk.css.map",
-    "static/js/2.595a850d.chunk.js.LICENSE.txt": "/mock-blog/static/js/2.595a850d.chunk.js.LICENSE.txt"
+    "static/js/2.be075e08.chunk.js.LICENSE.txt": "/mock-blog/static/js/2.be075e08.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64a4ad19.js",
-    "static/js/2.595a850d.chunk.js",
+    "static/js/2.be075e08.chunk.js",
     "static/css/main.4e9d1a16.chunk.css",
-    "static/js/main.809daede.chunk.js"
+    "static/js/main.7fe70b90.chunk.js"
   ]
 }
