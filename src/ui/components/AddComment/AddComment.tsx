@@ -6,20 +6,12 @@ import { Button } from 'ui/components/Button';
 import { IAddComment } from "./AddComment.interfaces";
 import styles from './AddComment.module.scss';
 
-
-const sleep = (ms: any) => new Promise(resolve => setTimeout(resolve, ms))
-
-const onSubmit = async (values: any) => {
-  await sleep(300);
-  console.log(values)
-}
-
 const formValidate = (values: any) => {
   const errors: any = {}
-  if (!values.userName) {
+  if (!values.user) {
     errors.user = 'Required'
   }
-  if (!values.notes) {
+  if (!values.content) {
     errors.content = 'Required'
   }
 
@@ -42,7 +34,12 @@ export const AddComment = ({
     setShowForm(!showForm)
   };
 
-  return !onAddComment ? (
+  const handleSubmit = (values: Object) => {
+    onAddComment && onAddComment(values)
+    setShowForm(false)
+  }
+
+  return onAddComment ? (
     <div className={classnames(styles.post, className)}>
       <Button
         caption={!showForm ? "Add Comment" : 'Close Form'}
@@ -50,37 +47,38 @@ export const AddComment = ({
         className={styles.btn}
       />
       {showForm &&
-        <Form
-          onSubmit={onSubmit}
-          initialValues={{}}
-          validate={formValidate}
-          render={({ handleSubmit, form, submitting, pristine, values }) => {
-            const valid = formIsValid(values);
+        <div className={styles.formContainer}>
+          <Form
+            onSubmit={handleSubmit}
+            initialValues={{}}
+            validate={formValidate}
+            render={({ handleSubmit, values }) => {
+              const valid = formIsValid(values);
 
-            return (
-              <form onSubmit={handleSubmit}>
-                <Field
-                  label='User Name'
-                  name='user'
-                  placeholder="e.g. Bla bla"
-                />
-                <Field
-                  type='textarea'
-                  label='Comment'
-                  name='content'
-                  placeholder="Notes"
-                />
-                <Button
-                  caption='Submit'
-                  disabled={valid}
-                />
+              return (
+                <form onSubmit={handleSubmit}>
+                  <Field
+                    label='User Name'
+                    name='user'
+                    placeholder="e.g. Bla bla"
+                  />
+                  <Field
+                    type='textarea'
+                    label='Comment'
+                    name='content'
+                    placeholder="Notes"
+                  />
+                  <Button
+                    caption='Submit'
+                    disabled={valid}
+                    className={styles.btn}
+                  />
                 </form>
-            )
-          }}
-        />
+              )
+            }}
+          />
+        </div>
       }
-
-
     </div>
   ) : null;
 };

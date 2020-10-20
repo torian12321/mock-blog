@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { AddComment } from 'ui/components/AddComment';
 import { IComment } from "./Comment.interfaces";
 import styles from './Comment.module.scss';
 
@@ -8,6 +9,7 @@ export const Comment = ({
   className,
   user,
   date,
+  onAddComment,
 }: IComment) => (
   <div className={classnames(
     styles.comment,
@@ -20,6 +22,7 @@ export const Comment = ({
       <span className={styles.content}>
         {children}
       </span>
+      <AddComment onAddComment={onAddComment} />
     </div>
   </div>
 );

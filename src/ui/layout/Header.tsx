@@ -4,9 +4,9 @@ import styles from './layout.module.scss';
 
 const Header = () => (
   <header className={styles.header}>
-    <div className='container'>
+    <nav className='container'>
       <Link to="/">Home</Link>
-    </div>
+    </nav>
   </header>
 );
 

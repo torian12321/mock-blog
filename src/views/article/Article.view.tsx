@@ -13,20 +13,20 @@ export const ViewArticle = () => {
 
   useEffect(() => {
     actions.fetchCommnentByPostId(postId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleAddComment = () => {
+  const handleAddComment = (args: Object) => {
+    console.log(args)
     actions.addComment({
       "postId": postId,
       "parent_id": null,
-      "user": "Jakeee",
-      "content": "Cras lectus nisl, scelerisque quis elit ut, luctus scelerisque purus."
+      ...args,
     });
   }
 
   return (
     <div className="container">
-      {/* {`${euro.shortName} has now a value of ${euro.rate}$`} */}
       <Post
         title={post.title}
         date={post.publish_date}
@@ -37,6 +37,7 @@ export const ViewArticle = () => {
       <CommentsGroup
         comments={comments}
         loading={isFetching}
+        onAddComment={handleAddComment}
       />
     </div>
   );

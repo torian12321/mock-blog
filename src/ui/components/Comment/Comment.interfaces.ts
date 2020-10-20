@@ -3,6 +3,7 @@ export interface IComment {
   className?: string,
   user?: string,
   date?: string,
+  onAddComment?: Function,
 };
 
 type comment = {

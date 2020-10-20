@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 import { AddComment } from 'ui/components/AddComment';
-import { Button } from 'ui/components/Button';
 import { IPost } from "./Post.interfaces";
 import styles from './Post.module.scss';
 
@@ -17,29 +16,20 @@ export const Post = ({
   }
 
   return (
-    <div className={classnames(styles.post, className)}>
+    <article className={classnames(styles.post, className)}>
       <div className={styles.body}>
-        <span className={styles.header}>
+        <h1 className={styles.header}>
           {title}
           <span className={styles.date}>
             {date}
           </span>
-        </span>
+        </h1>
         <span className={styles.content}>
           <div dangerouslySetInnerHTML={createMarkup()} />
         </span>
-        <AddComment />
-        {!!onAddComment &&
-          <div>
-            <Button
-              caption="Add Comment"
-              onClick={onAddComment}
-              className={styles.btn}
-            />
-          </div>
-        }
+        <AddComment onAddComment={onAddComment} />
       </div>
-    </div>
+    </article>
   );
 };
 
