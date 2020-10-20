@@ -3,7 +3,6 @@
 .post {
   margin: 0 0 16px;
   color: $color-main-text;
-  // background: $color-main;
   background: #f7eebf;
   border: 1px solid $color-main-darker;
   padding: .6em 1em;
@@ -19,6 +18,8 @@
 .header {
   color: $color-main-darker;
   margin: 0 0 10px;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .date {

@@ -16,20 +16,20 @@ export const Post = ({
   }
 
   return (
-    <div className={classnames(styles.post, className)}>
+    <article className={classnames(styles.post, className)}>
       <div className={styles.body}>
-        <span className={styles.header}>
+        <h1 className={styles.header}>
           {title}
           <span className={styles.date}>
             {date}
           </span>
-        </span>
+        </h1>
         <span className={styles.content}>
           <div dangerouslySetInnerHTML={createMarkup()} />
         </span>
         <AddComment onAddComment={onAddComment} />
       </div>
-    </div>
+    </article>
   );
 };
 
