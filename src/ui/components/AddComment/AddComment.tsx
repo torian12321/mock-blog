@@ -47,35 +47,37 @@ export const AddComment = ({
         className={styles.btn}
       />
       {showForm &&
-        <Form
-          onSubmit={handleSubmit}
-          initialValues={{}}
-          validate={formValidate}
-          render={({ handleSubmit, values }) => {
-            const valid = formIsValid(values);
+        <div className={styles.formContainer}>
+          <Form
+            onSubmit={handleSubmit}
+            initialValues={{}}
+            validate={formValidate}
+            render={({ handleSubmit, values }) => {
+              const valid = formIsValid(values);
 
-            return (
-              <form onSubmit={handleSubmit}>
-                <Field
-                  label='User Name'
-                  name='user'
-                  placeholder="e.g. Bla bla"
-                />
-                <Field
-                  type='textarea'
-                  label='Comment'
-                  name='content'
-                  placeholder="Notes"
-                />
-                <Button
-                  caption='Submit'
-                  disabled={valid}
-                  className={styles.btn}
-                />
-              </form>
-            )
-          }}
-        />
+              return (
+                <form onSubmit={handleSubmit}>
+                  <Field
+                    label='User Name'
+                    name='user'
+                    placeholder="e.g. Bla bla"
+                  />
+                  <Field
+                    type='textarea'
+                    label='Comment'
+                    name='content'
+                    placeholder="Notes"
+                  />
+                  <Button
+                    caption='Submit'
+                    disabled={valid}
+                    className={styles.btn}
+                  />
+                </form>
+              )
+            }}
+          />
+        </div>
       }
     </div>
   ) : null;
