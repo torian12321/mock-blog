@@ -25,14 +25,3 @@
   display: block;
   font-size: .8em;
 }
-
-.btn {
-  width: 100%;
-  display: block;
-  margin: 16px 0 0;
-
-  @media (min-width: 800px) {
-    width: auto;
-    margin-left: auto;
-  }
-}

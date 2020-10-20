@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 import { AddComment } from 'ui/components/AddComment';
-// import { Button } from 'ui/components/Button';
 import { IPost } from "./Post.interfaces";
 import styles from './Post.module.scss';
 
@@ -29,15 +28,6 @@ export const Post = ({
           <div dangerouslySetInnerHTML={createMarkup()} />
         </span>
         <AddComment onAddComment={onAddComment} />
-        {/* {!!onAddComment &&
-          <div>
-            <Button
-              caption="Add Comment"
-              onClick={onAddComment}
-              className={styles.btn}
-            />
-          </div>
-        } */}
       </div>
     </div>
   );

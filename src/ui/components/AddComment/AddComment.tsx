@@ -70,6 +70,7 @@ export const AddComment = ({
                 <Button
                   caption='Submit'
                   disabled={valid}
+                  className={styles.btn}
                 />
               </form>
             )
