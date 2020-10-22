@@ -32,16 +32,6 @@ jobs:
     - name: Build
       run: npm run build --if-present
 
-  deploy:
-    needs: build
-    strategy:
-      matrix:
-        node-version: [12.x]
-        os: [ubuntu-latest]
-
-    runs-on: ${{ matrix.os }}    
-
-    steps:
     - name: Deploy
       run: |
         git config --global user.name $user_name
